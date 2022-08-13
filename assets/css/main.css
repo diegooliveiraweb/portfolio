@@ -1,0 +1,64 @@
+body{
+  background-color: black;
+}
+/* End Transition Page */
+.page-enter-active,
+.page-leave-active {
+  transition: margin-top 1s;
+}
+
+.page-enter,
+.page-leave-to {
+  margin-top: -100vh;
+}
+
+/* End Transition Page */
+
+
+.btn-next, .btn-prev {
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform .5s;
+}
+
+.btn-next:hover {
+  transform: translate(-50%, 40%);
+}
+.btn-prev:hover {
+  transform: translate(-50%, -40%);
+}
+
+.cristal,
+.cristal-big {
+  background-image: url(~/assets/img/cristal.png);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+
+.cristal:hover,
+.cristal-big:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.cristal-big {
+  background-image: url(~/assets/img/cristal-big.png);
+}
+
+button[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  display: none;
+}
+
+button[data-tooltip]:hover::before {
+  display: block;
+}
