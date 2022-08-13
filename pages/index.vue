@@ -1,27 +1,97 @@
 <template>
-  <div class="flex h-screen w-full justify-center items-center bg-black overflow-x-hidden flex-col relative">
-      <div class="p-8 max-w-screen-lg z-20">
-          <h1 class="text-4xl xl:text-5xl text-white font-bold text-center mb-3">Diego Oliveira</h1>
-          <h2 class="text-gray-100 text-2xl text-center bg-black p-1 inline-block">Portfólio</h2>
-      </div>
-      <div class="h-1 block bg-green-400 w-full bar z-10"></div>
-      <span class="block h-10 w-10 bg-contain cristal absolute top-10 left-5"></span>
-      <span class="block h-52 w-52 bg-contain cristal absolute top-36 left-2 cristal-big"></span>
-      <span class="block h-10 w-10 bg-contain cristal absolute top-10 right-5"></span>
-      <NuxtLink to="/blog" class="absolute btn-next text-white bottom-10 transition ease-in-out hover:scale-110 duration-300" data-tooltip="Next">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
-        </svg>
-      </NuxtLink>
+  <div id="sections" class="relative">
+    <button @click="prevSlide" v-if="count"
+      class="absolute btn-prev text-white top-10 transition ease-in-out hover:scale-110 duration-300"
+      :data-tooltip="pages[count - 1] ?? ''">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
+      </svg>
+    </button>
+    <swiper :direction="'vertical'" :navigation="true" :pagination="false" :modules="modules"
+      class="mySwiper" @swiper="onSwiper">
+      <swiper-slide>
+        <Home />
+      </swiper-slide>
+      <swiper-slide>
+        <Sobre />
+      </swiper-slide>
+      <swiper-slide>
+        <Projetos />
+      </swiper-slide>
+      <swiper-slide>
+        <Blog />
+      </swiper-slide>
+    </swiper>
+    <button @click="nextSlide"
+      class="absolute btn-next text-white bottom-10 transition ease-in-out hover:scale-110 duration-300"
+      :data-tooltip="pages[count + 1]" v-if="pages.length-1 > count">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+      </svg>
+    </button>
   </div>
 </template>
 <script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 export default {
   name: 'IndexPage',
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  data() {
+    return {
+      swiperPages: null,
+      count: 0,
+      pages: ['Home', 'Sobre', 'Projetos', 'Blog']
+    }
+  },
+  methods: {
+    onSwiper(swiper) {
+      this.swiperPages = swiper;
+    },
+    nextSlide() {
+      this.swiperPages.slideNext();
+      this.count++;
+    },
+    prevSlide() {
+      this.swiperPages.slidePrev();
+      this.count--;
+    }
+  },
+  setup() {
+    return {
+      modules: [Pagination],
+    };
+  },
 }
 </script>
-<style> 
-  .bar{
+<style>
+.bar {
   transform: translateY(-47px);
-  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffffe6 !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(74, 222, 128) !important;
+}
+
+.swiper-button-next {
+  position: absolute !important;
+  top: 50% !important;
+}
 </style>
