@@ -1,3 +1,14 @@
+<script setup>
+useHead({
+  title: 'Diego Oliveira - Desenvolvedor Web Full Stack',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  charset: 'utf-8',
+  meta: [
+    { name: 'description', content: 'Olá! E sou o Diego. Um jovem entusiasta por desenvolvimento de software e um gamer, nas horas vagas. Minha carreira de programação começou a um ano e meio, desde então venho me aperfeiçoando cada vez mais.' },
+    { name: 'theme-color', content: '#000000' },
+  ],
+})
+</script>
 <template>
   <div id="sections" class="relative">
     <button @click="prevSlide" v-if="count"
