@@ -9,7 +9,7 @@
           d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
       </svg>
     </button>
-    <swiper :direction="'vertical'" :navigation="true" :pagination="false" :modules="modules" class="mySwiper"
+    <swiper :direction="'vertical'" :mousewheel="true" :navigation="true" :pagination="false" :modules="modules" class="mySwiper"
       @swiper="onSwiper">
       <swiper-slide>
         <Home />
@@ -36,7 +36,7 @@
 </template>
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Pagination } from "swiper";
+import { Mousewheel, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 export default {
@@ -76,7 +76,7 @@ export default {
       ],
     })
     return {
-      modules: [Pagination],
+      modules: [Mousewheel, Pagination],
     };
   },
 }
