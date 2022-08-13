@@ -2,7 +2,7 @@
 <template>
   <div id="sections" class="relative">
     <button @click="prevSlide" v-if="count"
-      class="absolute btn-prev text-white top-10 transition ease-in-out hover:scale-110 duration-300"
+      class="absolute btn-prev text-white top-16 xl:top-10 transition ease-in-out hover:scale-110 duration-300"
       :data-tooltip="pages[count - 1] ?? ''">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
@@ -25,7 +25,7 @@
       </swiper-slide>
     </swiper>
     <button @click="nextSlide"
-      class="absolute btn-next text-white bottom-10 transition ease-in-out hover:scale-110 duration-300"
+      class="absolute btn-next text-white bottom-16 xl:bottom-10 transition ease-in-out hover:scale-110 duration-300"
       :data-tooltip="pages[count + 1]" v-if="pages.length - 1 > count">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
