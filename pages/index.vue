@@ -2,15 +2,15 @@
 <template>
   <div id="sections" class="relative">
     <button @click="prevSlide" v-if="count"
-      class="absolute btn-prev text-white top-16 xl:top-10 transition ease-in-out hover:scale-110 duration-300"
+      class="absolute btn-prev text-white top-12 xl:top-10 transition ease-in-out hover:scale-110 duration-300"
       :data-tooltip="pages[count - 1] ?? ''">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
           d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894l6-3z" />
       </svg>
     </button>
-    <swiper :direction="'vertical'" :mousewheel="true" :navigation="true" :pagination="false" :modules="modules" class="mySwiper"
-      @swiper="onSwiper">
+    <swiper :modules="modules" :direction="'vertical'" :mousewheel="true" :navigation="true" :pagination="false" class="mySwiper"
+      @swiper="onSwiper" @slideChange="onSlideChange">
       <swiper-slide>
         <Home />
       </swiper-slide>
@@ -63,6 +63,9 @@ export default {
     prevSlide() {
       this.swiperPages.slidePrev();
       this.count--;
+    }, 
+    onSlideChange(){
+      this.count = this.swiperPages.activeIndex == 0 ? 0 : this.swiperPages.activeIndex + 1;
     }
   },
   setup() {
