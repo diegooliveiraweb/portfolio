@@ -2,7 +2,7 @@
 <template>
   <div id="sections" class="relative">
     <button @click="prevSlide" v-if="count"
-      class="absolute btn-prev text-white top-12 xl:top-10 transition ease-in-out hover:scale-110 duration-300"
+      class="absolute btn-prev text-white top-10 xl:top-10 transition ease-in-out hover:scale-110 duration-300"
       :data-tooltip="pages[count - 1] ?? ''">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
