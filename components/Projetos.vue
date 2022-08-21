@@ -38,7 +38,7 @@ export default {
     data() {
         return {
             projetos:[
-                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/videos-projetos/move-itaigara.mp4', title: 'Move Itaigara', description: 'Move Itaigara - Apartamentos de 3 quartos (suíte) com lavabo e 2 quartos (suíte) que faltava no Itaigara em Salvador.', url: 'https://moveitaigara.com.br/'},
+                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/move-itaigara.mp4', title: 'Move Itaigara', description: 'Move Itaigara - Apartamentos de 3 quartos (suíte) com lavabo e 2 quartos (suíte) que faltava no Itaigara em Salvador.', url: 'https://moveitaigara.com.br/'},
                 {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/blue-barra.mp4', title: 'BLue Barra', description: 'Seja para morar ou para investir, o Blue Barra é uma excelente opção para sua vida...', url: 'http://www.bluebarra.com.br/'},
                 {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/feirao-semana-tem-mais.mp4', title: 'Feirão: Semana Tem Mais', description: 'Casas e apartamentos, com preços imperdíveis, no endereço que você procura.', url: 'http://estacao1construtora.com.br/feirao-semana-tem-mais/'},
                 {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/horto-concept.mp4', title: 'Horto Concept', description: 'Projeto inovador e exclusivo, inspirado no design, bom gosto e arquitetura autoral.', url: 'https://hortoconcept.com.br/'},
