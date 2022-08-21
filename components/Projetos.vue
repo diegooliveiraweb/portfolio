@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col h-screen w-full justify-center items-center overflow-x-hidden relative z-10">
+    <div class="flex flex-col h-screen w-full justify-center items-center overflow-x-hidden overflow-y-auto relative z-10">
       
       <div class="p-8 max-w-screen-lg z-20">
           <h1 class="text-4xl xl:text-5xl text-white font-bold text-center mb-3">Projetos</h1>
