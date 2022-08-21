@@ -38,12 +38,12 @@ export default {
     data() {
         return {
             projetos:[
-                {id:0, src: this.$route.path+'_nuxt/assets/videos-projetos/move-itaigara.mp4', title: 'Move Itaigara', description: 'Move Itaigara - Apartamentos de 3 quartos (suíte) com lavabo e 2 quartos (suíte) que faltava no Itaigara em Salvador.', url: 'https://moveitaigara.com.br/'},
-                {id:0, src: this.$route.path+'_nuxt/assets/videos-projetos/blue-barra.mp4', title: 'BLue Barra', description: 'Seja para morar ou para investir, o Blue Barra é uma excelente opção para sua vida...', url: 'http://www.bluebarra.com.br/'},
-                {id:0, src: this.$route.path+'_nuxt/assets/videos-projetos/feirao-semana-tem-mais.mp4', title: 'Feirão: Semana Tem Mais', description: 'Casas e apartamentos, com preços imperdíveis, no endereço que você procura.', url: 'http://estacao1construtora.com.br/feirao-semana-tem-mais/'},
-                {id:0, src: this.$route.path+'_nuxt/assets/videos-projetos/horto-concept.mp4', title: 'Horto Concept', description: 'Projeto inovador e exclusivo, inspirado no design, bom gosto e arquitetura autoral.', url: 'https://hortoconcept.com.br/'},
-                {id:0, src: this.$route.path+'_nuxt/assets/videos-projetos/vivace-sim.mp4', title: 'Vivace SIM', description: 'O Vivace SIM dispõe de casas com 2/4 e uma infraestrutura completa de lazer para você viver os melhores momentos da vida, com a sua família.', url: ''},
-                {id:0, src: this.$route.path+'_nuxt/assets/videos-projetos/paradiso-papagaio.mp4', title: 'Paradiso Papagaio', description: ' E é pensando nos seus melhores momentos que o Paradiso Papagaio conta com uma infraestrutura completa de lazer.', url: ''},
+                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/videos-projetos/move-itaigara.mp4', title: 'Move Itaigara', description: 'Move Itaigara - Apartamentos de 3 quartos (suíte) com lavabo e 2 quartos (suíte) que faltava no Itaigara em Salvador.', url: 'https://moveitaigara.com.br/'},
+                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/blue-barra.mp4', title: 'BLue Barra', description: 'Seja para morar ou para investir, o Blue Barra é uma excelente opção para sua vida...', url: 'http://www.bluebarra.com.br/'},
+                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/feirao-semana-tem-mais.mp4', title: 'Feirão: Semana Tem Mais', description: 'Casas e apartamentos, com preços imperdíveis, no endereço que você procura.', url: 'http://estacao1construtora.com.br/feirao-semana-tem-mais/'},
+                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/horto-concept.mp4', title: 'Horto Concept', description: 'Projeto inovador e exclusivo, inspirado no design, bom gosto e arquitetura autoral.', url: 'https://hortoconcept.com.br/'},
+                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/vivace-sim.mp4', title: 'Vivace SIM', description: 'O Vivace SIM dispõe de casas com 2/4 e uma infraestrutura completa de lazer para você viver os melhores momentos da vida, com a sua família.', url: ''},
+                {id:0, src: 'https://raw.githubusercontent.com/DiegoOliveiraDvJr/portfolio/main/assets/videos-projetos/paradiso-papagaio.mp4', title: 'Paradiso Papagaio', description: ' E é pensando nos seus melhores momentos que o Paradiso Papagaio conta com uma infraestrutura completa de lazer.', url: ''},
             ]
         }
     },
