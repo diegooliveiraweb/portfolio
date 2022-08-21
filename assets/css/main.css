@@ -68,3 +68,17 @@ button[data-tooltip]::before {
 button[data-tooltip]:hover::before {
   display: block;
 }
+.btn-prev[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: auto;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  display: none;
+}
