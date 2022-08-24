@@ -37,6 +37,7 @@ body{
 .cristal-big {
   z-index: 1;
   background-image: url(~/assets/img/cristal.png);
+  background-repeat: no-repeat;
   cursor: pointer;
   transform: translateY(-50%);
   transition: all 0.5s;
